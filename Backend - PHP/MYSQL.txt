@@ -1,0 +1,9 @@
+CREATE TABLE `giriskayitlari` (
+  `Id` int(11) NOT NULL,
+  `PersonelId` varchar(50) NOT NULL,
+  `PersonelAdi` varchar(100) NOT NULL,
+  `KapiId` varchar(50) NOT NULL,
+  `KapiAdi` varchar(100) NOT NULL,
+  `Tarih` timestamp NOT NULL DEFAULT current_timestamp(),
+  `GirisTipi` enum('Giriş','Çıkış') NOT NULL DEFAULT 'Giriş'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
